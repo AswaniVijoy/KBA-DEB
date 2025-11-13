@@ -1,0 +1,44 @@
+body{
+            margin: 150px 150px;
+        }
+        .button{
+            background: #702A8C;
+            border-radius: 4px;
+            border-color: #702A8C;
+            color: white;
+            
+        }
+        .tb{
+            border-radius: 8px;
+            background-color: #EBE1F8;
+            padding: 10px 10px;
+            margin-left: auto;
+            margin-right: auto;
+            
+        }
+        .tb h1{
+            text-align: center;
+            color: purple;
+        }
+        .tb h5{
+            text-align: center;
+            margin: 0px;
+            margin-bottom: 15px;
+        }
+        .tb input{
+            width: 250px;
+        }
+        
+        .login {
+        display: flex; 
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0px;
+        }
+        .tb td a{
+            text-decoration: none;
+            color: #702A8C;
+        }
+        h4{
+            color: purple;
+        }

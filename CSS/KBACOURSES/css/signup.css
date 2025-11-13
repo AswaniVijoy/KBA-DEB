@@ -1,0 +1,54 @@
+ body{
+            margin: 0 ;
+            background-color: white;
+            margin: 100px 100px;
+            
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #EBE1F8;
+        }
+        .navbar{
+            margin-right: 20px;
+        }
+        .navbar a{
+            text-decoration: none;
+            padding: 5px;
+            color: #702A8C;
+        }
+        .icon{
+            padding: 0 20px;
+        }
+         .tb td select{
+            width: 260px;
+        }
+        .tb input{
+            width: 250px;
+        }
+        .tb{
+            width: 300px;
+            background-color:#EBE1F8 ;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left: auto;
+            margin-right: auto;
+            border-spacing: 10px;
+        }
+        .btn{
+            color: #ffffff;
+            background-color: purple;
+            border-radius: 4px;
+            border-color: purple;
+        }
+        h5{
+            text-align: center;
+        }
+        h5 a{
+            color: purple;
+        }
+        h1{
+            text-align: center;
+            color: purple;
+        }
