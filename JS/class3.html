@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class3</title>
+
+</head>
+<body>
+    <script>
+
+    //greatest of two numbers
+
+    a=10,b=20
+
+    if(a>b)
+    {
+        document.write(`${a} is greater`)
+    }
+    else{         
+        document.write(`${b} is greater`)    
+    }
+
+    //odd or even
+
+    n=2
+
+    if(n%2==0){       
+        document.write(`<br><br>${n} is even `)
+    }
+    else{
+        document.write(`<br><br>${n} is odd`)
+    }
+
+    //positive or negetive
+
+    n=-2
+
+    if(n>0){       
+        document.write(`<br><br>${n} is positive `)
+    }
+    else{
+        document.write(`<br><br>${n} is negetive`)
+    }
+
+    //Eligible for voting or not
+
+    n=19
+
+    if(n>=18){       
+        document.write(`<br><br>Eligible for voting`)
+    }
+    else{
+        document.write(`<br><br>Not Eligible for voting`)
+    }
+
+    //Grade
+
+    mark=89
+    if(mark<0 || mark>100){
+        document.write("<br><br>Invalid mark")
+    }   
+    else if(mark>=90){
+        document.write("<br><br>A+ grade")
+    }
+    else if(mark>=80){
+        document.write("<br><br>A grade")
+
+    }
+     else if(mark>=70){
+        document.write("<br><br>B+ grade")
+
+    }
+     else if(mark>=60){
+        document.write("<br><br>B grade")
+
+    }
+    else if(mark>=50){
+        document.write("<br><br>C+ grade")
+
+    }
+    else{
+        document.write("<br><br>Failed")
+
+    }
+
+    //switch
+
+    x=5
+    switch(x)
+    {
+        case 1:{
+            document.write("<br><br>One");
+            break;
+        }
+         case 2:{
+            document.write("<br><br>Two");
+            break;
+
+        }
+         case 3:{
+            document.write("<br><br>Three");
+            break;
+
+        }
+         case 4:{
+            document.write("<br><br>Four");
+            break;
+
+        }
+         case 5:{
+            document.write("<br><br>Five");
+            break;
+
+        }
+         case 6:{
+            document.write("<br><br>Six");
+            break;
+
+        }
+         case 7:{
+            document.write("<br><br>Seven");
+            break;
+
+        }
+         case 8:{
+            document.write("<br><br>Eight");
+            break;
+
+        }
+         case 9:{
+            document.write("<br><br>Nine");
+            break;
+
+        } case 10:{
+            document.write("<br><br>Ten");
+            break;
+
+        }
+        default:{
+             
+            document.write("<br><br>Not between 1 and 10");
+      
+        }
+    
+
+    }
+
+    //operators
+    a=2,b=4,x = "-"
+    
+    switch (x){
+        case "+":{
+            document.write(`<br><br>${a+b}`);
+            break;
+
+        }
+        case "-":{
+            document.write(`<br><br>${a-b}`);
+            break;
+
+        }
+        case "*":{
+            document.write(`<br><br>${a*b}`);
+            break;
+
+        }
+        case "/":{
+            document.write(`<br><br>${a+b}`);
+            break;
+
+        }
+        case "%":{
+            document.write(`<br><br>${a+b}`);
+            break;
+
+        }
+        default:{
+             
+            document.write("<br><br>Invalid");
+      
+        }
+
+    }
+    // x=10,y=5
+    // a="str"
+
+
+    // switch(a){
+    //     case 1 :{
+    //     document.write(`<br><br>Datatype of ${a} is `,typeof a)
+    //     break;
+    //     }
+    //     case "str" :{
+    //     document.write(`<br><br>Datatype of ${a} is `,typeof a)
+    //     break;
+    //     }
+    //     case x>y :{
+    //     document.write(`<br><br>Datatype of ${a} is `,typeof a)
+    //     break;
+    //     }
+    //     default:{
+    //     document.write("<br><br>invalid")
+
+    //     }
+
+    // }
+    x=2,y=3 
+    a=x>y
+
+
+    switch(typeof a){
+        case 'number' :{
+        document.write("<br><br>Type is number")
+        break;
+        }
+        case 'string' :{
+        document.write("<br><br>Type is string")
+        break;
+        }
+        case 'boolean' :{
+                document.write("<br><br>Type is boolean")
+
+        break;
+        }
+        default:{
+        document.write("<br><br>invalid")
+
+        }
+
+    }
+    // a=4
+    // c=a++
+    // document.write("<br>",c)
+    // a=4
+    // d=++a
+    // document.write("<br>",d)
+    a=10
+    document.write("<br>",a++)
+     a=10
+    document.write("<br>",++a)
+
+    for(i=1;i<=10;i++){
+    document.write("<br>I am fine<br>")
+    }
+
+
+
+    </script>
+</body>
+</html>

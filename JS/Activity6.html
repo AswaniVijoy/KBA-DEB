@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity6</title>
+</head>
+
+<body>
+    <script>
+
+        //Take the substrings “You can study”, “you”,”will”,”do it” and combine as a sentence.
+        document.write("<br><b><font color=blue>Take the substrings “You can study”, “you”,”will”,”do it” and combine as a sentence.</font></b><br><br>")
+
+        string = "You".concat(" ", "can", " ", "study", " ", "you", " ", "will", " ", "do", " ", "it")
+        document.write(string)
+        document.write("<br>")
+        //Replace MongoDB with Blockchain.
+        document.write("<br><b><font color=blue>Replace MongoDB with Blockchain.</font></b><br>")
+
+        str = "MongoDB is a decentralised distributed ledger .MongoDB can eliminate centralisation."
+        document.write("<br>")
+        document.write(str.replace(/MongoDB/g, "Blockchain"))
+        //Print the string “MongoDB is a decentralised distributed ledger” using substring/substr.
+        document.write("<br><br><b><font color=blue> Print the string “MongoDB is a decentralised distributed ledger” using substring/substr.</font></b>")
+
+        document.write("<br>")
+        document.write("<br>")
+        document.write(str.substring(0, 47))
+        //Compare “Hello World” & “hEllO World” and display the result & its type.
+        document.write("<br><br><b><font color=blue>Compare “Hello World” & “hEllO World” and display the result & its type.  </font></b>")
+        
+        str1 = "Hello World";
+        str2 = "hEllO World";
+        result = (str1 == str2);
+        document.write("<br>")
+        document.write("<br>")
+        document.write("Result = " , result);
+        document.write("<br>Type = " , typeof result);
+
+        //Print this statement “ I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.”
+
+        document.write("<br><br><b><font color=blue>Print this statement “ I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.”  </font></b>")
+
+        s1 = "I am 13 yrs of old and my brother is 10 yrs older to me. He is now 23 years old."
+        document.write("<br>")
+        document.write("<br>")
+        document.write(s1)
+
+        //Consider this statement “ My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase).
+        document.write("<br><br><b><font color=blue>Consider this statement “ My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase).  </font></b>")
+        
+        s2 = "My name is aswani vijoy. I live in thrissur"
+        document.write("<br>")
+        document.write("<br>")
+        document.write(s2.replace("aswani vijoy", "ASWANI VIJOY").replace("thrissur", "THRISSUR"))
+
+        //Consider these two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't like'.
+        document.write("<br><br><b><font color=blue>Consider these two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't like'. </font></b>")
+        
+        s3 = "I like to play video games.I don't like Hide & seek."
+        document.write("<br>")
+        document.write("<br>")
+        document.write(s3.replace("like", "don't like"))
+        //Let an array be a=[2,5,7,9,12,45] add 2 to each element in matrix using for-in loop
+        document.write("<br><br><b><font color=blue>Let an array be a=[2,5,7,9,12,45] add 2 to each element in matrix using for-in loop</font></b>")
+        
+        a = [2, 5, 7, 9, 12, 45]
+        for (x in a) {
+            a[x] = a[x] + 2
+        }
+        document.write("<br>")
+        document.write("<br>")
+        document.write("Array after adding 2")
+        document.write("<br>")
+        document.write("<br>")
+
+        document.write(a)
+        //find the sum of elements in matrix using for-of loop
+        document.write("<br><br><b><font color=blue>find the sum of lements in matrix using for-of loop </font></b>")
+        
+        sum = 0
+        for (x of a) {
+            sum = sum + x
+        }
+        document.write("<br>")
+        document.write("<br>")
+
+
+        document.write("Sum of elements in the given array is ", sum)
+        //find whether a aprticular value(say 10) present or not in matrix 
+        document.write("<br><br><b><font color=blue>find whether a aprticular value(say 10) present or not in matrix </font></b>")
+        
+        a = [2, 5, 7, 9, 12, 45];
+        num = 10;
+
+        for (i = 0; i < a.length; i++) {
+            if (a[i] == num) {
+                document.write("<br><br>Element Found");
+                break;
+            }
+        }
+
+        if (i == a.length) {
+            document.write("<br><br>Element Not Found");
+        }
+
+
+    </script>
+</body>
+
+</html>

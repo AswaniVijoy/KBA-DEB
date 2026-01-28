@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity3</title>
+</head>
+<body>
+    <script>
+    //Write a JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80 return 65 otherwise return 80 (using ternary operator).
+    n1=50,n2=5
+    sum=n1+n2
+    document.write(sum >= 50 && sum <= 80 ? 65 : 80)
+    
+    //find the sign of the product of three numbers.
+    let p=1,q=2,r=3
+    let n=p*q*r
+    if(n>0){
+     document.write("<br><br>Sign is positive")
+        
+    }
+    else if(n==0)
+    {
+     document.write("<br><br>Zero")
+        
+    }
+    else{
+     document.write("<br><br>Sign is negetive")
+        
+    }
+
+    //check whether a given positive number is a multiple of 3 or 7
+    n=34
+    if(n%3==0){
+        document.write("<br><br>Multiple of 3")
+    }
+    else if(n%7==0)
+    {
+        document.write("<br><br>Multiple of 7")
+    }
+    else
+        {
+        document.write("<br><br>Not a multiple of 3 and 7")
+    }
+    //check the CGPA on given condition.
+     let CGPA=8
+     
+     switch (CGPA){
+        case 7:{
+            document.write("<br><br>Your CGPA is 7");
+            break;
+
+        }     
+         case 8:{
+            document.write("<br><br>Your CGPA is 8");
+            break;
+
+        }  
+         case 9:{
+            document.write("<br><br>Your CGPA is 9");
+            break;
+
+        }  
+         case 10:{
+            document.write("<br><br>Your CGPA is 10");
+            break;
+
+        }    
+
+        default:{
+             
+            document.write("<br><br>Invalid CGPA");
+      
+        }
+
+    }
+
+
+    //print the month name by given number
+    let x=2
+     
+     switch (x){
+        case 1:{
+            document.write("<br><br>January");
+            break;
+
+        }  
+        case 2:{
+            document.write("<br><br>February");
+            break;
+
+        }case 3:{
+            document.write("<br><br>March");
+            break;
+
+        }case 4:{
+            document.write("<br><br>April");
+            break;
+
+        }case 5:{
+            document.write("<br><br>May");
+            break;
+
+        }case 6:{
+            document.write("<br><br>June");
+            break;
+
+        }case 7:{
+            document.write("<br><br>July");
+            break;
+
+        }case 8:{
+            document.write("<br><br>August");
+            break;
+
+        }case 9:{
+            document.write("<br><br>September");
+            break;
+
+        }  
+        case 10:{
+            document.write("<br><br>October");
+            break;
+
+        }case 11:{
+            document.write("<br><br>November");
+            break;
+
+        }case 12:{
+            document.write("<br><br>December");
+            break;
+
+        }     
+      
+        
+        default:{
+             
+            document.write("<br><br>Invalid");
+      
+        }
+
+    }
+
+    //calculate the root of a quadratic equation.
+    let a=1,b=0,c=0
+     D = Math.sqrt(b*b-4*a*c)
+      if(D==0){
+        let root = -b / (2 * a);
+        document.write("<br><br>Root = ",root)
+    }
+    else if(D>0)
+    {
+        let sqrt_D = Math.sqrt(D);
+        let root1 = (-b + sqrt_D) / (2 * a)
+        let root2 = (-b - sqrt_D) / (2 * a)
+        document.write("<br><br>Root1 = ",root1)
+        document.write("<br><br>Root2 = ",root2)
+
+    }
+    else
+        {
+            let sqrt_neg_D = Math.sqrt(-(b*b-4*a*c));
+            realPart = -b / (2 * a);
+            imaginaryPart = sqrt_neg_D / (2 * a);
+            document.write(`<br><br>Root = ${realPart} + ${imaginaryPart}i`)
+
+    }
+
+
+
+
+    //Read temperature in centigrade and display a suitable message according to the temperature 
+     let temp=28
+     
+     switch (true){
+        case (temp<0):{
+            document.write("<br><br>Freezing weather");
+            break;
+
+        }      
+
+        
+        case temp >= 10 && temp<20:{
+        document.write("<br><br>Cold weather");
+        break;
+
+        }
+        case (temp>=20 && temp<30):{
+            document.write("<br><br>Normal in Temp");
+            break;
+
+        }
+        case (temp>=30 && temp<40):{
+            document.write("<br><br>Its Hot");
+            break;
+
+        }
+        case (temp>=40):{
+            document.write("<br><br>Its Very Hot");
+            break;
+
+        }
+        default:{
+             
+            document.write("<br><br>Invalid");
+      
+        }
+
+    }
+    
+    </script>
+</body>
+</html>

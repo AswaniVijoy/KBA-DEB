@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    <script>
+      function shopCart(){
+        let shop=new Map()
+        shop.set('Apple',3)
+        shop.set('Orange',2)
+        shop.set('Grape',1)
+
+        const prices={
+            'Apple':100,
+            'Orange':200,
+            'Grape':300
+        }
+        let totalCost=0
+        shop.forEach((quantity,item)=>{
+            totalCost+=prices[item]*quantity
+        })
+        document.getElementById('calculate').innerHTML='Total Cost= '+totalCost
+        document.getElementById('size').innerHTML='Number of Items= '+shop.size
+        
+      }
+
+    </script>
+    <button onclick="shopCart()">Calculate</button>
+    <div id="calculate"></div>
+    <div id="size"></div>
+
+</body>
+
+</html>

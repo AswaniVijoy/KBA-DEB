@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class2</title>
+</head>
+<body>
+    <div id="name"></div>
+
+   <div id="list"></div>
+
+
+    
+    <script>
+        const ele=document.createElement("h1")
+        ele.innerHTML=("Fruits")
+
+
+    // const ele=document.createElement("h1").textContent=("Javascript")
+       const divele=document.getElementById("name")
+       divele.appendChild(ele)
+
+        
+       const ulist=document.createElement("ul") //create ul element then create li elements as needed and add text
+
+       const l1=document.createElement("li")
+       l1.textContent=("Orange")
+
+       const l2=document.createElement("li")
+       l2.textContent=("Mango")
+
+       const l3=document.createElement("li")
+       l3.textContent=("Grape")
+
+       const l4=document.createElement("li")
+       l4.textContent=("Watermelon")        
+
+       ulist.appendChild(l1) //append created li's to ul
+       ulist.appendChild(l2)
+       ulist.appendChild(l3)
+       ulist.appendChild(l4)
+
+       divele.appendChild(ulist) // append ul to div created
+       ulist.style.listStyleType="square"
+       
+      
+
+       //Mathematical Operators
+
+
+       //Addition
+       let a=20 ,b=10
+       sum=a+b
+       document.write("Sum is ",sum)
+       a="20" ,b="10"
+       sum1=a+b
+       document.write("<br> Sum is ",sum1)
+       //Subtraction
+
+       a=20,b=10
+       sub=a-b
+       document.write("<br><br> Difference is ",sub)
+
+       //Division
+
+       div=a/b
+       document.write("<br><br> Quotient is ",div)
+
+       //Remainder
+
+       rem=a%b
+       document.write("<br><br> Remainder is ",rem)
+
+       //Comparison
+
+       a=10, b=30
+       document.write(" <br><br>Relation is ",a===b)
+       document.write(" <br>Relation is ",a==b)
+       document.write(" <br>Relation is ",a>b)
+       document.write(" <br>Relation is ",a>=b)
+       document.write(" <br>Relation is ",a<b)
+       document.write(" <br>Relation is ",a<=b)
+       document.write(" <br><br>Greatest is ",a>b?a:b)
+       b=40
+      
+       document.write(" <br>Greatest is ",a>b?a:b)
+
+
+       a=60,b=400,c=1000
+        
+       document.write(" <br><br>Greatest is ",a>b?(a>c?a:c):(b>c?b:c))
+
+       a=13,b=2
+       if(a<b)
+       document.write("<br><br>Greatest is a ",a)
+       document.write(`<br><br>${b} is less than ${a}`)
+
+       a=60,b=40,c=10
+       document.write(" <br><br>Greatest is ",a>b&&c?a:(b>c?b:c))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Throw New Error</title>
+</head>
+<body>
+    <h1>Trying Throw Error</h1>
+    <script>
+    function checkAge(age){
+        if(age<18){
+            throw new Error("You must be 18 years to vote")
+        }
+        else{
+            console.log('You can vote')
+        }
+    }
+          try{
+            // code that may cause an error
+            checkAge(16)
+        }
+        catch(error){
+            //common errors are caught here
+            console.log("An Error occurred "+error.message)
+
+        }
+        finally{
+            //this always executes
+            console.log("This will always be executed")
+
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class6</title>
+</head>
+
+<body>
+    <script>
+        str = "I am a front end developer"
+        document.write("<b>Length of the string is</b> ", str.length, "<br>")
+        for (i = 7; i < 12; i++) {
+            document.write(str[i])
+        }
+        for (i = 12; i > 6; i--) {
+
+            document.write(str[i])
+        }
+
+
+
+
+        document.write("<br>The character is ", str.charAt(7))
+        document.write("<br>The word is ", str.slice(7, 12))
+        document.write("<br>The word is ", str.substring(7, 12))
+        document.write("<br>The word is ", str.slice(7))//print from 7 to last
+        document.write("<br>The word is ", str.slice(0, 12))
+        document.write("<br>The word is ", str.slice(-9))//counting starts from last
+        document.write("<br>The word is ", str.toUpperCase())
+        document.write("<br>The word is ", str.toLowerCase())
+        document.write("<br>The word is ", str.concat(" and i am ready to work"))
+        document.write("<br>The word is ", str.search("developer"))
+        document.write("<br>The word is ", str.replace("front", "back"))
+        document.write("<br>")
+
+        //2D Array
+        a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        document.write("The matrix is a ", a)
+        document.write("<br>")
+
+        document.write("The matrix a<br>")
+
+        for (i = 0; i < a.length; i++) {
+            for (j = 0; j < a.length; j++) {
+                document.write(" ", a[i][j])
+
+            }
+            document.write("<br>")
+
+        }
+        document.write("The matrix b")
+
+        b = [[], [],[]]
+        for (i = 0; i < b.length; i++) {
+            for (j = 0; j < b.length; j++) {
+                b[i][j] = i + 1
+
+            }
+
+        }
+        for (i = 0; i < b.length; i++) {
+            document.write("<br>")
+
+            for (j = 0; j < b.length; j++) {
+                document.write(" ", b[i][j])
+
+
+            }
+
+        }
+        document.write("<br>")
+
+        sum = 0
+        document.write("Sum of two matrices")
+         if (a.length == b.length) {
+        for (i = 0; i < a.length; i++) {
+            document.write("<br>")
+            for (j = 0; j < b.length; j++) {
+               
+
+                    sum = a[i][j] + b[i][j]
+
+                    document.write(" ", sum)
+
+                }              
+
+            }
+
+        }
+         else {
+
+                    document.write("<br>Both array have different length ")
+                    
+
+                }
+
+    </script>
+</body>
+
+</html>

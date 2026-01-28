@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button type="button" onclick="showalert()">Show Alert</button>
+    <script>
+        function showalert(){
+            window.alert("Helo from window object")
+        }
+        document.write("<br>")
+        
+        document.write(this)//window object
+
+        function showthis(){
+        document.write(this)
+
+        }
+        document.write("<br>")
+        
+        showthis()//window object
+
+        person={
+            name:'Ram',
+            greet:function(){
+                document.write("Hello "+this.name)
+            }
+        }
+        document.write("<br>")
+        person.greet()//person object scope
+        
+        arrowgreet=()=>{
+                document.write("Arrow function context is  ",this)
+
+        }
+        document.write("<br>")
+
+        arrowgreet()//window object
+    </script>
+</body>
+</html>

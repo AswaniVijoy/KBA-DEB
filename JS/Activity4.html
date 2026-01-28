@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity4</title>
+</head>
+<body>
+    <script>
+        //print natural numbers from 10 to 50 using while loop
+        document.write("Natural numbers from 10 to 50<br>")
+        
+        i=10
+        while(i<=50){
+            document.write(i,"<br>")
+            i++
+
+        }
+        //sum & average
+        i=10,sum=0
+        while(i<=50){
+            sum=sum+i
+            avg=sum/40
+            i++
+        }
+        document.write("Sum = ",sum)
+        document.write("<br>Average = ",avg,"<br>")
+        //print cube of numbers from 10 to 30
+        document.write("<br>Cube of numbers from 10 to 30<br>")
+        for(i=10;i<=30;i++){
+            document.write("<br>",i*i*i,"<br><br>")
+        }
+        //Pattern Printing
+        document.write("Pattern<br>")
+        for(i=25;i<=50;i+=5){
+            document.write(i)
+            if (i < 50) document.write(",")
+        }
+         document.write("<br>")
+        for(i=10;i<=10000;i*=10){
+            document.write(i)
+            if (i < 10000) document.write(",")
+
+        }
+        document.write("<br>")
+        for(i=8;i<=20;i+=2){
+            document.write(i)
+            if (i < 20) document.write(",")
+
+        }
+        
+        // //pattern1
+        // document.write("<br><br>Pattern 1<br>")
+        //  for(i=3;i>=1;i--){
+        //      for(j=1;j<=i;j++){
+        //         document.write("* " )
+            
+        // }
+        //     document.write("<br>")
+        // }
+
+
+        //pattern2
+        document.write("Pattern 2<br>")
+         for(i=1;i<4;i++){
+             for(j=0;j<i;j++){
+                document.write(" ",i)
+            
+        }
+            document.write("<br>")
+        }
+        //pattern3
+        document.write("Pattern 3<br>")
+
+         for(i=1;i<=3;i++){
+             for(j=1;j<=i;j++){
+                document.write(" ",j )
+            
+        }
+            document.write("<br>")
+        }
+        //pattern 4
+        document.write("Pattern 4<br>")
+
+        for(i=1;i<4;i++){
+             for(j=1;j<4;j++){
+                document.write("2 ")
+            
+        }
+            document.write("<br>")
+        }
+        //pattern5
+        document.write("Pattern 5<br>")
+         for(i=1;i<=3;i++){
+             for(j=3;j>=i;j--){
+                document.write(" ",i)
+            
+        }
+            document.write("<br>")
+        }
+
+            document.write("Multiplication Table<br>")
+
+        //print multiplication table for a given number
+        n=4
+        for(i=1;i<=10;i++){
+            document.write(`<br>${i} x ${n} = `,n*i)
+
+        }
+        //reverse of a number
+        num=134
+        rev=0
+        while(num>0){
+            rem=num%10
+            rev=rev*10+rem
+            num=num/10|0
+        }
+        document.write("<br><br>Reverse = ",rev)
+    </script>
+</body>
+</html>

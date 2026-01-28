@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <!-- Reading data from html -->
+        <label for="nameInput">Enter the name : </label>
+        <input type="text" id="nameInput">
+        <button onclick="showName()">Show Name</button>
+        <p id="output"></p>
+
+        <script>
+            function showName() {
+                let name=document.getElementById('nameInput').value 
+                document.getElementById('output').textContent='Hello '+name
+            }
+            document.write("Objects in js")
+            document.write("<br>")
+            document.write("<br>")
+
+            //objects
+            let person={
+                name: 'Ram',
+                age: 20,
+                address:'TVM',
+                greet:function(){
+                    document.write("Hello ",this.name)
+                }
+            }
+            document.write(person.name)
+            document.write("<br>")
+            document.write(person.age)
+            document.write("<br>")
+            document.write(person.address)
+            document.write("<br>")
+            person.greet()
+
+        </script>
+</body>
+</html>

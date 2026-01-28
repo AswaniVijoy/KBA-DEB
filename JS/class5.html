@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class5</title>
+</head>
+<body>
+    <script>
+        let a=[2,4,7,8,5,6]
+        document.write("<font color=blue><b>Element in third location is </font></b>",a[2])
+        document.write("<br><br><b><font color=blue>Sum of 8 and 6 is </font></b>",a[3] + a[5])
+        document.write("<br><br><b><font color=blue>Product of 2 and 6 is </font></b>",a[0] * a[5])
+        document.write("<br><br>",a)
+        a[6]=10
+        document.write("<br><br>",a)
+        a[3]=9
+        document.write("<br><br>",a)
+        document.write("<br><br><b> <font color=blue>Length of array is</font></b> ",a.length)
+        a.push(12)
+        document.write("<br><br><b><font color=blue>Array after pushing 12 to end</font></b><br>",a)
+        document.write("<br><br><b><font color=blue>Popped element is </font></b>",a.pop())
+        document.write("<br><br><b><font color=blue>Array after popping 12 </font></b><br>",a)
+        let b=[]
+        for(i=0;i<5;i++){
+           b[i]=i+1
+        }
+            document.write("<br><br><b><font color=blue>New Array</font></b><br>",b)
+
+        let c=[]
+        k=2
+        for(i=0;i<5;i++){
+            
+            c[i]=k
+            k=k+2
+            
+            
+        }
+
+            document.write("<br><br><b><font color=blue>Even Numbers</font></b><br>",c)
+            let d=[]
+        p=1
+        for(i=0;i<5;i++){
+            
+            d[i]=p
+            p=p+2          
+            
+        }
+            document.write("<br><br><b><font color=blue>Odd Numbers</font></b><br>",d)
+
+     let e=[]
+        q=1
+        for(i=0;i<5;i++){
+            
+            e[i]=q
+            q=q+2   
+            e[i]=e[i]+2
+            
+        }
+            document.write("<br><br><b><font color=blue>Odd Numbers</font></b><br>",e)
+
+       
+
+        
+        for(i=0;i<5;i++){          
+            
+            e[i]=e[i]*2            
+        }
+            document.write("<br><br><b><font color=blue>Odd Numbers</font></b><br>",e)
+
+         sum=0
+        for(i=0;i<5;i++){          
+            
+            sum=sum+e[i]            
+        }
+            document.write("<br><br><b><font color=blue>Sum=</font></b>",sum)
+             pro=1
+        for(i=0;i<5;i++){          
+            
+            pro=pro*e[i]            
+        }
+            document.write("<br><br><b><font color=blue>Product=</font></b>",pro,"<br>")
+
+            a=[1,2,3,4]
+document.write("<br>Array after adding 5<br>")
+
+for(x in a){
+a[x]=a[x]+5
+}
+document.write(a)
+sum=0
+for(x of a){
+sum=sum+x
+}
+document.write("<br>Sum = ",sum)
+
+
+    </script>
+</body>
+</html>

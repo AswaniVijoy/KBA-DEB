@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity2</title>
+</head>
+<body>
+
+    <p id="me"></p>
+    <h2>Cinema</h2>
+    <div id="cine"></div>
+    <div id="sel"></div>
+    <script>
+
+      //Ques1
+      const para=document.createElement("p")
+      para.textContent=("Hello, my name is Aswani Vijoy, and I’m someone who enjoys learning, connecting with people, and exploring new ideas. I have a background in BSC Computer Science.")
+
+      const paragraph=document.getElementById("me")
+      paragraph.appendChild(para)
+
+      //Ques2
+      const cinema=document.getElementById("cine")
+      const c=document.createElement("ul")
+      const l1=document.createElement("li")
+      l1.textContent="Avatar"
+      const l2=document.createElement("li")
+      l2.textContent="Air Bender"
+      const l3=document.createElement("li")
+      l3.textContent="Interstellar"
+      const l4=document.createElement("li")
+      l4.textContent="Openheimer"
+      c.appendChild(l1)
+      c.appendChild(l2)
+      c.appendChild(l3)
+      c.appendChild(l4)
+      cinema.appendChild(c)
+
+      //Ques3
+      const select=document.createElement("select")
+      const opt1=document.createElement("option")
+      opt1.textContent="Avatar"
+      const opt2=document.createElement("option")
+      opt2.textContent="Air Bender"
+      const opt3=document.createElement("option")
+      opt3.textContent="Interstellar"
+      const opt4=document.createElement("option")
+      opt4.textContent="Openheimer"
+      select.appendChild(opt1)
+      select.appendChild(opt2)
+      select.appendChild(opt3)
+      select.appendChild(opt4)
+      sel.appendChild(select)
+
+      //Ques4
+      a=3,b=5
+      document.write("<br>Before Swapping ")
+      document.write(`a=${a} , b=${b}`)
+
+      temp=a
+      a=b
+      b=temp
+      document.write("<br>After Swapping ")
+      document.write(`a=${a} , b=${b}`)
+
+      //Ques5
+
+      a = 10,b=20
+      document.write("<br><br>Before swapping: a =", a, ", b =", b);
+      [a, b] = [b, a];
+      document.write("<br>After swapping: a =", a, ", b =", b);
+
+
+      //Ques6
+      C=27
+      F = C * 9/5 + 32
+      document.write("<br><br>Celsius to fahrenheit = ",F)
+
+      //Ques7
+      a=5
+      document.write("<br>Square = ",a*a)
+      //Ques8
+      document.write("<br>Cube = ",a*a*a)
+      //Ques9
+      a=5,l=2,b=3,r=5,h=10
+
+      S=a*a
+      R=l*b
+      T=1/2*b*h
+      C=3.14*r*r
+      document.write("<br><br>Area of square = ",S)
+      document.write("<br>Area of rectangle = ",R)
+      document.write("<br>Area Triangle = ",T)
+      document.write("<br>Area of Circle = ",C)
+
+      //Ques10
+      x=1,y=2,z=5
+
+      Sp=4*a
+      Rp=2*(l+b)
+      Tp=x+y+z
+      Cp=2*3.14*r
+      document.write("<br><br>Perimeter of square = ",Sp)
+      document.write("<br>Perimeter of rectangle = ",Rp)
+      document.write("<br>Perimeter Triangle = ",Tp)
+      document.write("<br>Perimeter of Circle = ",Cp)
+
+      //Ques11
+      p=2,n=3,r=5,t=10
+      SI=(p*n*r)/100
+      CI = p*(1 + r/n)^n*t
+      document.write("<br><br>Simple Interest = ",SI)
+      document.write("<br>Compound Interest = ",CI)
+
+      //Ques12
+      a=3,b=7
+      document.write("<br><br>Greatest Number is ",a>b?a:b)
+
+      //Ques13
+
+      x=10,y=20,z=3
+      document.write("<br><br>Smallest number is ",x<y?(x<z?x:z):(y<z?y:z))
+
+
+    </script>
+    
+</body>
+</html>

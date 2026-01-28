@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Scope of function
+        function outer(){
+            outvar="I am outer"
+            document.write(outvar)
+
+            function inner(){
+            document.write("<br>I am inner<br>")
+            }
+            inner()
+        }
+        outer()
+        //Normal Function
+        add=function(a,b){
+            return a+b
+        }
+        document.write("Sum of 5 & 10 using Regular Function ",add(5,10))
+        document.write("<br>")
+
+        //Arrow Function
+
+        let addarrow=(a,b)=>a+b
+        document.write("Sum of 5 & 10 using Arrow Function ",addarrow(5,10))
+
+        let squarearrow=a=>a*a
+            document.write("<br>")
+
+        document.write("Square of a 5  using Arrow Function ",squarearrow(5))
+
+         let person={
+                name: 'Ram',
+                age: 20,
+                address:'TVM',
+                greet:function(){
+                    setTimeout(( )=>{
+                        document.write("Hello "+this.name)
+                    },5000)
+                }
+            }
+            person.greet()
+    </script>
+</body>
+</html>
