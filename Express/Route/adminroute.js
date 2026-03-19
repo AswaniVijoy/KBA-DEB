@@ -1,85 +1,138 @@
 import { Router } from "express";
+import Course from "../Models/coursemodel.js";
+import upload from "../Middleware/upload.js"
 const admin=Router()
 const course=new Map()
 const carts =new Map()
 
 
-admin.post("/addcourse",(req,res)=>{
-    try{
-        const {CourseName,CourseId,CourseType,Description,Price}=req.body
-        if(course.get(CourseName)){
-        res.status(400).json({msg:"Course Already Exists"});
-        }
-        else{
-            try{
-                course.set(CourseName,{CourseId,CourseType,Description,Price})
-                res.status(200).json({msg:"Course Successfully Entered"});
-            }
-            catch{
-                res.status(200).json({msg:"Something went wrong while setting data"});
-
-            }
-            
-
-        }
+admin.post('/addCourse', async (req, res) => {
+  try {
+    const { CourseName, CourseId, CourseType, Description, Price } = req.body;
+    // if (course.get(CourseName)) {
+    if (await Course.findOne({ courseName: CourseName })) {
+      res.status(400).json({ msg: 'Course already exist' })
     }
-    catch{
-        res.status(500).json({msg:"Something went wrong"});
-        
+    else {
+      // course.set(CourseName, { CourseId, CourseType, Description, Price });
+      const newCourse = new Course({
+        courseName: CourseName,
+        courseId: CourseId,
+        courseType: CourseType,
+        description: Description,
+        price: Number(Price)
+      });
+      await newCourse.save();
+      res.status(201).json({ msg: 'Course successfully entered' })
+
     }
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).json({ msg: 'Something went wrong' })
+  }
+
 })
 
 
-admin.put("/updateAllCourse",(req,res)=>{
-    try{
-        const {CourseName,CourseId,CourseType,Description,Price}=req.body
-        course.get(CourseName)
-        course.set(CourseName,{CourseId,CourseType,Description,Price})
-        res.status(200).json({msg:"Course Updated"});
-        
+admin.post('/addCourseWithImage', upload.single('CourseImage'),async (req, res) => {
+  try {
+    const { CourseName, CourseId, CourseType, Description, Price } = req.body;
+    // if (course.get(CourseName)) {
+    if (await Course.findOne({ courseName: CourseName })) {
+      res.status(400).json({ msg: 'Course already exist' })
     }
-    catch{
-        res.status(404).json({msg:"Course Not Found"});
+    else {
+          let imageBase64 = null; //is an image format
+      if (req.file) {
+        imageBase64 = req.file.buffer.toString('base64');
+      }
+      // course.set(CourseName, { CourseId, CourseType, Description, Price });
+      const newCourse = new Course({
+        courseName: CourseName,
+        courseId: CourseId,
+        courseType: CourseType,
+        description: Description,
+        price: Number(Price),
+         image: imageBase64
+      });
+      await newCourse.save();
+      res.status(201).json({ msg: 'Course successfully entered' })
 
     }
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).json({ msg: 'Something went wrong' })
+  }
 
 })
-admin.patch("/updateCourse",(req,res)=>{
-    try{
-        const {CourseName,Price}=req.body
-        const result=course.get(CourseName)
-        if(result){
-            course.set(CourseName,{CourseId:result.CourseId,CourseType:result.CourseType,Description:result.Description,Price})
-            res.status(200).json({msg:"Course Updated"});
-        }
-        
-        
-    }
-    catch{
-        res.status(404).json({msg:"Course Not Found"});
 
-    }
 
+admin.put('/updateCourse', async (req, res) => {
+  try {
+    const { CourseName, CourseId, CourseType, Description, Price } = req.body;
+    // if (course.get(CourseName)) {
+    //   course.set(CourseName, { CourseId, CourseType, Description, Price });
+    if (await Course.findOne({ courseName: CourseName })) {
+      await Course.updateOne({ courseName: CourseName }, {
+        courseId: CourseId,
+        courseType: CourseType,
+        description: Description,
+        price: Number(Price)
+      });
+
+      res.status(200).json({ msg: "Course details updated succesfully" })
+    }
+    else {
+      res.status(404).json({ msg: "Course not found" })
+    }
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).json({ msg: 'Something gone wrong' })
+  }
 })
-admin.delete("/deleteCourse",(req,res)=>{
-    try{
-        const {CourseName}=req.body
-        if(course.get(CourseName)){
-            course.delete(CourseName)
-            res.status(200).json({msg:"Course Deleted"});
-        }
-        else{
-        res.status(404).json({msg:"Course Not Found"});
 
-        }
-        
-        
+admin.patch('/updateCourse1', async (req, res) => {
+  try {
+    const { CourseName, Price } = req.body;
+    // const result = course.get(CourseName);
+    const result = await Course.findOne({ courseName: CourseName });
+    console.log(result);
+    if (result) {
+      // course.set(CourseName, { CourseId: result.CourseId, CourseType: result.CourseType, Description: result.Description, Price })
+      await Course.updateOne({ courseName: CourseName }, { price: Number(Price) });
+      res.status(200).json({ msg: "Course Updated" })
     }
-    catch{
-        res.status(500).json({msg:"Something went wrong"});
-
+    else {
+      res.status(404).json({ msg: "Course doesnt exist" })
     }
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).json({ msg: "Something went wrong" })
+  }
+})
 
+
+admin.delete('/deleteCourse', async (req, res) => {
+  try {
+    const { CourseName } = req.body;
+    // if (course.get(CourseName)) {
+    //   course.delete(CourseName)
+    if (await Course.findOne({ courseName: CourseName })) {
+      await Course.deleteOne({ courseName: CourseName });
+      res.status(200).json({ msg: 'Course deleted succesfully' })
+    }
+    else {
+      res.status(404).json({ msg: 'Course not found' })
+    }
+  }
+  catch (error) {
+    console.error(error);
+    res.status(500).json({ msg: 'Something went wrong' })
+  }
 })
 
 
@@ -88,8 +141,7 @@ admin.post("/addtocart",(req,res)=>{
     try{
     const {CourseName,Price}=req.body
     const UserName=req.name 
-    console.log(UserName);
-    
+    console.log(UserName);    
 
     if(!UserName||!CourseName||!Price){
         res.status(400).json({msg:"CourseName and Price are required"})

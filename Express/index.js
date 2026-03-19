@@ -1,5 +1,6 @@
 import express,{json} from 'express'
 import dotenv from 'dotenv'
+import mongoose from 'mongoose'
 import {router} from './Route/userroute.js'
 import { admin } from './Route/adminroute.js';
 import { authenticate } from './Middleware/auth.js';
@@ -14,12 +15,13 @@ app.use("/admin",authenticate,admincheck,admin)
 app.use("/",user)
 
 
-// const port=8000;
+const mongodbURI = process.env.MONGODB_URI ||'mongodb://127.0.0.1:27017/studentsdb';
+mongoose.connect(mongodbURI).then(() => {
+    console.log("MongoDB connected")
+}).catch((err) => {
+    console.log("MongoDB connection error:", err)
+})
 
-// app.listen(port,()=>{
-//     console.log(`Server is running at ${port}`);
-    
-// });
 app.listen(process.env.port,()=>{
     console.log(`Server is running at ${process.env.port}`);
     

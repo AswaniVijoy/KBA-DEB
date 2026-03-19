@@ -1,0 +1,106 @@
+openapi: 3.0.0
+info:
+  title: Library API
+  description: CRUD API for managing books
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8000
+
+tags:
+  - name: Books
+    description: Book management APIs
+
+paths:
+  /:
+    post:
+      tags:
+        - Books
+      summary: Add a new book
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Book"
+      responses:
+        201:
+          description: Book created successfully
+
+    get:
+      tags:
+        - Books
+      summary: Get all books
+      responses:
+        200:
+          description: List of books
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Book"
+
+  /{id}:
+    put:
+      tags:
+        - Books
+      summary: Update a book by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Book"
+      responses:
+        200:
+          description: Book updated successfully
+        404:
+          description: Book not found
+
+    delete:
+      tags:
+        - Books
+      summary: Delete a book by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: Book deleted successfully
+        404:
+          description: Book not found
+
+components:
+  schemas:
+    Book:
+      type: object
+      required:
+        - title
+        - author
+        - price
+      properties:
+        title:
+          type: string
+          example: Atomic Habits
+        author:
+          type: string
+          example: James Clear
+        price:
+          type: number
+          example: 499
+        publishedYear:
+          type: number
+          example: 2018
+        availability:
+          type: string
+          example: Available
